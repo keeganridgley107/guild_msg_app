@@ -15,9 +15,10 @@ app.config['SECRET_KEY'] = '^(p#PHi&^wF,W_KDTTH2#j' # needed to create instance 
 socketio = SocketIO(app) # socketIO wrapper 
 
 
-def main():
-    socketio.run(app) # socketIO wrapper starts flask server 
+@app.route("/")
+def index():
+    return "Hello, world!"
 
 
 if __name__ == "__main__":
-    main()
+    socketio.run(app) # socketIO wrapper starts flask server
