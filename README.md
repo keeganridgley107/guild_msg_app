@@ -13,8 +13,9 @@ The chat server is now running on localhost port 5000 (127.0.0.1:5000)
 to connect as a client and begin chatting open any browser and navigate to `localhost:5000`
 
 
-- Goal: 
-    - An application that allows two users to send short text messages to each other
+### Goal:
+
+Build an application that allows two users to send short text messages to each other
 
 - Guidelines: 
     - Don't spend much time  
@@ -32,9 +33,10 @@ to connect as a client and begin chatting open any browser and navigate to `loca
 - front end is hard. 
     - just spent too much time on centering columns and text, taking the dog out to refocus 
 
-- todo
-    - socket is showing conns from multiple clients but not emiting msg responses to multiple clients 
-        - SOLVED: broadcast flag would help on the emits!
-    - tried to use json as quick db solution but it failed to prove any easier than sqlite 
-        - emit causes namespace error when hit with loaded_messages in index()
+### todo
+
+- socket is showing conns from multiple clients but not emiting msg responses to multiple clients 
+    - SOLVED: broadcast flag would help on the emits!
+- tried to use json as quick db solution but it failed to prove any easier than sqlite 
+    - emit causes namespace error when hit with loaded_messages in index()
     
