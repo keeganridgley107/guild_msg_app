@@ -20,3 +20,6 @@ quick little messaging app written in python
     - challenge myself with db once mvp is working
 - front end is hard. 
     - just spent too much time on centering columns and text, taking the dog out to refocus 
+
+- todo
+    - socket is showing conns from multiple clients but not emiting msg responses to multiple clients 
