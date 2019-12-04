@@ -16,4 +16,5 @@ quick little messaging app written in python
 - will likely need socket to get bi lateral communications 
     - flask-socketio seems like better choice if I decide to add flask front end 
 - pip version is not current, update if issues arise
-- 
+- decided I'm going with flask/ socketIO to add front end to chat server 
+    - challenge myself with db once mvp is working
