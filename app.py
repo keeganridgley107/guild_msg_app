@@ -8,13 +8,22 @@ date: 12/04/19
 
 from flask import Flask, render_template, request 
 from flask_socketio import SocketIO, emit  
-
+import json
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '^(p#PHi&^wF,W_KDTTH2#j' # needed to create instance of socketIO app 
 socketio = SocketIO(app) # socketIO wrapper 
 
-################## ROUTES ####################
+################# SOCKETIO ##################
+
+@socketio.on('message')
+def handle_message(message):
+    emit('message response', message)
+
+@socketio.on('connection-event')
+def handle_connection(json):
+    emit('connection response', json)
+################## ROUTES ###################
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
