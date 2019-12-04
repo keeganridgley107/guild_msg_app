@@ -13,6 +13,10 @@ socket.on('connect', function(){
 // listen for new connections
 socket.on('connection-response', function(json){
     console.log("NewUser", json)
+    if ($('#empty-msg').length){
+        $('#empty-msg').remove()
+    }
+    $('#message-window').append('<div class="well well-sm">Someone entered the chat!</div>')
 })
 
 // listen for new messages
@@ -21,7 +25,7 @@ socket.on('message-response', function(respMessage){
         $('#empty-msg').remove()
     }
     $('#message-window').append('<div class="well well-sm">'+ respMessage.username + ' : '+ respMessage.data +'</div>')
-    console.log("newMsg", respMessage)
+    // console.log("newMsg", respMessage)
 })
 
 // submit form data using jQuery 
@@ -32,7 +36,7 @@ var form = $('#chat-form').on("submit", function(e){
     // clear the inputs for next msg 
     $("#chat-msg").val("") 
     $("#chat-msg").focus()
-    
+
     // send message and username 
     socket.emit('chat-message', {
         'username': username,
