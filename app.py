@@ -19,12 +19,12 @@ socketio = SocketIO(app) # socketIO wrapper
 @socketio.on('chat-message')
 def handle_message(message):
     print("Got a Message!", str(message))
-    emit('message-response', message)
+    emit('message-response', message, broadcast=True)
 
 @socketio.on('connection-event')
 def handle_connection(json):
     print("Got a Connection!", str(json))
-    emit('connection-response', json)
+    emit('connection-response', json, broadcast=True)
 
 ################## ROUTES ###################
 
