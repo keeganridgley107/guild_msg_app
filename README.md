@@ -18,3 +18,5 @@ quick little messaging app written in python
 - pip version is not current, update if issues arise
 - decided I'm going with flask/ socketIO to add front end to chat server 
     - challenge myself with db once mvp is working
+- front end is hard. 
+    - just spent too much time on centering columns and text, taking the dog out to refocus 
