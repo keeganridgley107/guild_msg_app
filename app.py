@@ -16,7 +16,7 @@ socketio = SocketIO(app) # socketIO wrapper
 
 ################# SOCKETIO ##################
 
-@socketio.on('message')
+@socketio.on('chat-message')
 def handle_message(message):
     print("Got a Message!", str(message))
     emit('message-response', message)

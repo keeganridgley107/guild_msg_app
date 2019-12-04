@@ -16,22 +16,25 @@ socket.on('connection-response', function(json){
 })
 
 // listen for new messages
-socket.on('message-response', function(message){
-    console.log("newMsg", message)
+socket.on('message-response', function(respMessage){
+    if ($('#empty-msg').length){
+        $('#empty-msg').remove()
+    }
+    $('#message-window').append('<div class="well well-sm">'+ respMessage.username + ' : '+ respMessage.data +'</div>')
+    console.log("newMsg", respMessage)
 })
 
 // submit form data using jQuery 
 var form = $('#chat-form').on("submit", function(e){
     e.preventDefault()
-    var message = $("#chat-msg").val()
-    
+    var message = $('#chat-msg').val()
+    var username = $('#username').val()
     // clear the inputs for next msg 
     $("#chat-msg").val("") 
-    $("#username").val("")
     
     // send message and username 
-    socket.emit('message', {
+    socket.emit('chat-message', {
         'username': username,
-        'message': message
+        'data': message
     })
 })
