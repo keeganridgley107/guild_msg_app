@@ -31,6 +31,7 @@ var form = $('#chat-form').on("submit", function(e){
     var username = $('#username').val()
     // clear the inputs for next msg 
     $("#chat-msg").val("") 
+    $("#chat-msg").focus()
     
     // send message and username 
     socket.emit('chat-message', {
