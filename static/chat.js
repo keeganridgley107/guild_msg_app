@@ -23,9 +23,13 @@ socket.on('message-response', function(message){
 // submit form data using jQuery 
 var form = $('#chat-form').on("submit", function(e){
     e.preventDefault()
-    var username = $("#username").val()
     var message = $("#chat-msg").val()
     
+    // clear the inputs for next msg 
+    $("#chat-msg").val("") 
+    $("#username").val("")
+    
+    // send message and username 
     socket.emit('message', {
         'username': username,
         'message': message
