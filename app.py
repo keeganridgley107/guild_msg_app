@@ -6,7 +6,7 @@ author: keegan ridgley
 date: 12/04/19 
 """
 
-from flask import Flask, render_template 
+from flask import Flask, render_template, request 
 from flask_socketio import SocketIO  
 
 
