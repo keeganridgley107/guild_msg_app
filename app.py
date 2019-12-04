@@ -15,13 +15,9 @@ app.config['SECRET_KEY'] = '^(p#PHi&^wF,W_KDTTH2#j' # needed to create instance 
 socketio = SocketIO(app) # socketIO wrapper 
 
 ################## ROUTES ####################
-@app.route("/")
+
+@app.route("/", methods=['GET', 'POST'])
 def index():
-    return "Hello, world!"
-
-
-@app.route("/chat")
-def chat():
     return render_template('./chat_page.html')
 
 if __name__ == "__main__":
