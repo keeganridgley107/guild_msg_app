@@ -21,4 +21,4 @@ def index():
 
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True) # socketIO wrapper starts flask server
+    socketio.run(app, debug=True) # socketIO wrapper starts flask server 
