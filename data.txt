@@ -1,0 +1,12 @@
+{
+    "messages": [
+        {
+            "username": "Bob", 
+            "data": "Hey Alice"
+        },
+        {
+            "username": "Alice", 
+            "data": "Hey Bob, how are you?"
+        }
+    ]
+}

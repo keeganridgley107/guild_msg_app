@@ -1,6 +1,21 @@
 # guild_msg_app
 quick little messaging app written in python 
 
+## How to run
+Copy and paste the following commands into a terminal: 
+```
+git clone https://github.com/keeganridgley107/guild_msg_app.git
+
+cd guild_msg_app/
+
+python3 -m venv guild_msg_venv
+
+source guild_msg_venv/bin/activate
+
+pip install -r requirements.txt
+
+python app.py
+```
 
 - Goal: 
     - An application that allows two users to send short text messages to each other
@@ -11,7 +26,7 @@ quick little messaging app written in python
     - it's perfectly fine to have one or two "hardcoded" accounts that simply work with each other
 
 
-### Thoughts 
+### Notes
 
 - will likely need socket to broadcast / recieve messages
     - flask-socketio seems like better choice if I decide to add flask front end 
@@ -23,4 +38,7 @@ quick little messaging app written in python
 
 - todo
     - socket is showing conns from multiple clients but not emiting msg responses to multiple clients 
-    - SOLVED: broadcast flag would help on the emits!
+        - SOLVED: broadcast flag would help on the emits!
+    - tried to use json as quick db solution but it failed to prove any easier than sqlite 
+        - emit causes namespace error when hit with loaded_messages in index()
+    
