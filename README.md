@@ -23,3 +23,4 @@ quick little messaging app written in python
 
 - todo
     - socket is showing conns from multiple clients but not emiting msg responses to multiple clients 
+    - SOLVED: broadcast flag would help on the emits!
