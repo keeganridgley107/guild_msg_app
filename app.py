@@ -7,7 +7,8 @@ date: 12/04/19
 """
 
 from flask import Flask, render_template, request 
-from flask_socketio import SocketIO, emit  
+from flask_socketio import SocketIO, emit 
+from bs4 import BeautifulSoup as Soup
 import json 
 import os
 
@@ -20,8 +21,21 @@ socketio = SocketIO(app) # socketIO wrapper
 @socketio.on('chat-message')
 def handle_message(message):
     print("Got a Message!", str(message))
-    # write messages to file for persistance 
-
+    # write messages to file for persistance? 
+    
+    # new idea: update html template with each msg emit
+    # html_doc = open('templates/chat_page.html', 'w')
+    # html_template = Soup(html_doc) # parse template
+    # print(html_template)
+    # template_message_window = html_template.find('div', {"id": "message-window"}) # find msg window
+    # print(template_message_window)
+    # new_tag = html_template.new_tag('div') # create new msg div
+    # new_tag.attrs['class'] = 'well well-sm' # add class 
+    # new_tag.append(message['username'] + ' : '+ message['data']) # add msg text
+    # print(new_tag)
+    # template_message_window.append(new_tag) # add new div to template 
+    # html_doc.write(html_template)
+    # html_doc.close()
     emit('message-response', message, broadcast=True)
 
 @socketio.on('connection-event')
