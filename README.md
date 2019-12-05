@@ -16,7 +16,7 @@ The easiest way to demo the app is to open two separate browser windows side-by-
 ### Goal:
 Build an application that allows two users to send short text messages to each other
 - Guidelines: 
-    - Don't spend too much time (4hrs - half day)
+    - Don't spend too much time (4 - 6 hours)
     - no accounts, users, registration, graphics or visual appeal 
     - it's perfectly fine to have one or two "hardcoded" accounts that simply work with each other
 
