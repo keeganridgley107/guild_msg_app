@@ -32,11 +32,14 @@ Build an application that allows two users to send short text messages to each
     - challenge myself with db once mvp is working
 - front end is hard. 
     - just spent too much time on centering columns and text, taking the dog out to refocus 
-
-### todo
-
-- socket is showing conns from multiple clients but not emiting msg responses to multiple clients 
+- socket is showing connections from multiple clients but not emiting msg responses to multiple clients 
     - SOLVED: broadcast flag would help on the emits!
-- tried to use json as quick db solution but it failed to prove any easier than sqlite 
-    - emit causes namespace error when hit with loaded_messages in index()
-    
+- emit causes namespace error when hit with loaded_messages in index()
+
+### Todo
+
+- tried to use local json file as quick storage solution but it failed to provide a benefit 
+    - time / memory trade off of json insert & load will likely end up worse at scale
+        - using a local csv file, hashtable or an actual sqlite db would be more optimal long term solutions 
+- focused on real time communications first with socket design, would have been smart to implement storage earlier in retrospect
+- possible work-around solution for message storage is to update the template html once messages have been appended to message-window div    

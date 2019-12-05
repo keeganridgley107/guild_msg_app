@@ -29,10 +29,11 @@ socket.on('message-response', function(respMessage){
 })
 
 // submit form data using jQuery 
-var form = $('#chat-form').on("submit", function(e){
+$('#chat-form').on("submit", function(e){
     e.preventDefault()
     var message = $('#chat-msg').val()
     var username = $('#username').val()
+
     // clear the inputs for next msg 
     $("#chat-msg").val("") 
     $("#chat-msg").focus()
