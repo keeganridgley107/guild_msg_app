@@ -10,8 +10,7 @@ The chat server is now running on localhost port 5000 (127.0.0.1:5000)
 
 ## How to connect
 
-to connect as a client and begin chatting open any browser and navigate to `localhost:5000`
-
+The easiest way to demo the app is to open two seperate browser windows side-by-side and navigate both of them to `localhost:5000` 
 
 ### Goal:
 
@@ -23,7 +22,7 @@ Build an application that allows two users to send short text messages to each
     - it's perfectly fine to have one or two "hardcoded" accounts that simply work with each other
 
 
-### Notes
+### Notes while coding
 
 - will likely need socket to broadcast / recieve messages
     - flask-socketio seems like better choice if I decide to add flask front end 
@@ -43,3 +42,4 @@ Build an application that allows two users to send short text messages to each
         - using a local csv file, hashtable or an actual sqlite db would be more optimal long term solutions 
 - focused on real time communications first with socket design, would have been smart to implement storage earlier in retrospect
 - possible work-around solution for message storage is to update the template html once messages have been appended to message-window div    
+    - tried using bs4 but encountered error with type not being string, possible solution would add step to read, update, close, to parse html
