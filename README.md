@@ -1,5 +1,7 @@
 # guild_msg_app
-a quick little messaging app server with an html frontend 
+a quick little messaging app 
+
+made with a python server and socketio
 ## How to run
 
 Copy and paste the following commands into a terminal: 
@@ -7,8 +9,10 @@ Copy and paste the following commands into a terminal:
 git clone https://github.com/keeganridgley107/guild_msg_app.git && cd guild_msg_app/ && python3 -m venv guild_msg_venv && source guild_msg_venv/bin/activate && pip install -r requirements.txt && python app.py
 ```
 The chat server is now running on localhost port 5000 (127.0.0.1:5000)
+
 ## How to connect
 The easiest way to demo the app is to open two separate browser windows side-by-side and navigate both of them to `localhost:5000` 
+
 ### Goal:
 Build an application that allows two users to send short text messages to each other
 - Guidelines: 
@@ -32,6 +36,7 @@ Build an application that allows two users to send short text messages to each
 - a potential issue with json idea, emit throws error 
     - emit causes namespace error when hit with loaded_messages in index()
 - I focused on real-time communications first with socket design, would have been smart to implement storage earlier in retrospect
+
 ### Todo
 - I tried to use local json file as a quick storage solution but it failed to provide a benefit 
     - time/memory trade-off of json insert & load will end up awful at scale 
