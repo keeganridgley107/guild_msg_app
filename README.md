@@ -44,7 +44,7 @@ Build an application that allows two users to send short text messages to each
     - possible workaround solution for message storage is to update the template html once messages have been appended to message-window div 
     - tried using bs4 but encountered error with type not being string, a possible solution would add step to read, update, close, to parse html
 - would have been cool to leverage more socketio funcationality to allow users to create named chatrooms 
-- also with local storage I also would have liked to add the ability to prevent dupelicate usernames and save usernames
+- also with local storage I also would have liked to add the ability to prevent duplicate usernames and save usernames
 
 ### Summary
 When I initially read the prompt and saw the timeline/complexity advised I thought focusing on real-time communication driven by socketio would be a good solution based on experience using it in the past with javascript projects. I found a python pkg that integrated flask and socketio and thought that would work, the docs for flask_socketio demonstrated the use of custom emitters which I used to emit and listen for events between the python server and the html / javascript frontend. once I had achieved two-way communication using socketio I attempted to add chat persistence to the app, I had planned initially to use local memory in my python server since the scope was small enough. This proved more difficult than I initially thought since I tried to use json which as I mentioned above wouldn't scale and didn't end up working anyway due to issues I couldn't resolve with socketio's emit function. 
